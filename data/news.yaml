@@ -1,0 +1,8 @@
+# News (home page shows the newest 4; all on /news/). Newest first.
+# date: YYYY-MM-DD. text: Markdown (links allowed).
+
+- date: 2026-10-12
+  text: New lab website. TODO replace with a real first item or delete.
+# - date: 2026-08-20
+#   text: Linn's paper on mechanical memory of confinement pressure is out in
+#     [Life Science Alliance](https://doi.org/10.26508/lsa.202603831).

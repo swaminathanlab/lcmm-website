@@ -1,0 +1,65 @@
+# Research themes (Research page and home-page tiles, in this order).
+# `papers`: PubMed IDs (or DOIs) of papers in data/publications.yaml shown under the theme.
+# `media`: optional image or looping .mp4 in data/gallery/ shown on the theme's card.
+# `tags`: short keywords shown as pills.
+
+intro: |
+  Cells live inside a matrix whose stiffness, viscoelasticity, architecture and
+  composition vary between tissues and change in disease. We ask how cells decode
+  these physical cues at the molecular scale, how the information persists after the cue
+  is gone, and how it decides how epithelial and cancer cells grow and invade.
+
+themes:
+  - id: mechanosensing
+    title: Molecular mechanosensing at adhesions
+    summary: |
+      How focal adhesions decode physical information from the ECM. Using polarization
+      microscopy and molecular-clutch modelling we found that the orientational order of
+      integrins and F-actin in focal adhesions changes with ECM density, giving cells a way
+      to read density separately from stiffness. We also study septin 7 as an
+      ECM-dependent adhesion component that tunes mechanosensing in fibroblasts.
+    media: ""
+    tags: [Focal adhesions, Integrins, Polarization microscopy]
+    papers: ["37463754", "39650732", "41458455"]
+
+  - id: memory
+    title: Mechanical memory
+    summary: |
+      Cells can keep responding to a mechanical environment after they have left it. In
+      fibroblasts, persistent activation by a stiff ECM requires integrin- and
+      formin-dependent chromatin remodelling. In epithelial monolayers, a memory of past
+      confinement pressure sets how far the tissue later expands.
+    media: ""
+    tags: [Mechanical memory, Chromatin, Fibroblasts, Epithelia]
+    papers: ["41915876", "42624657"]
+
+  - id: invasion
+    title: ECM material properties and 3D invasion
+    summary: |
+      We build interpenetrating-network hydrogels in which stiffness, viscoelasticity and
+      ligand composition can be tuned independently, and grow breast epithelial acini in
+      them. An integrin-Piezo1 axis drives ECM remodelling and invasion of 3D breast
+      epithelium. Ongoing work asks how ECM physical complexity sets invasion mode.
+    media: ""
+    tags: [IPN hydrogels, Viscoelasticity, Piezo1, 3D invasion]
+    papers: ["41082347"]
+
+  - id: heterogeneity
+    title: Mechanical heterogeneity in cancer cell populations
+    summary: |
+      Together with NanoLund engineers we sort cancer cells by physical properties in
+      microfluidic devices. Size-based sorting revealed functional heterogeneity among
+      subpopulations.
+    media: ""
+    tags: [Microfluidics, Cell sorting, Breast cancer]
+    papers: ["42083795"]
+
+  - id: collectives
+    title: Physics of epithelial collectives
+    summary: |
+      With theorists we study how mechanical cues are integrated in cell collectives.
+      In crowded collectives, local packing can override adhesion and stiffness cues for
+      YAP activation.
+    media: ""
+    tags: [YAP, Cell packing, Physical modelling]
+    papers: ["41537875"]

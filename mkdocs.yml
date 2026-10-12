@@ -1,0 +1,53 @@
+site_name: LCMM
+site_description: Laboratory of Cell and Molecular Mechanobiology (Swaminathan lab), Lund University. ECM mechanobiology, mechanical memory and cancer invasion.
+site_author: Laboratory of Cell and Molecular Mechanobiology
+# Test address. When replacing the current site, see PUBLISHING.md Part C.
+site_url: https://swaminathanlab.github.io/lcmm-website/
+repo_url: https://github.com/swaminathanlab/lcmm-website
+edit_uri: edit/main/data/
+copyright: © Laboratory of Cell and Molecular Mechanobiology · Lund University
+use_directory_urls: true
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  font: false          # Outfit and Cormorant Garamond are self-hosted in docs/assets/fonts
+  features:
+    - navigation.top
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+
+nav:
+  - Home: index.md
+  - Research: research.md
+  - Publications: publications.md
+  - People: people.md
+  - Gallery: gallery.md
+  - News: news.md
+  - Contact: contact.md
+  - Join us: join-us.md
+
+plugins: []
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - smarty
+  - toc:
+      permalink: false
+
+extra_css:
+  - assets/stylesheets/lcmm.css
+extra_javascript:
+  - assets/javascripts/lcmm.js
+
+validation:
+  nav:
+    omitted_files: info
+  links:
+    absolute_links: ignore

@@ -1,0 +1,6 @@
+{#- Home page: full-width sections (hero, research, gallery, people, contact). -#}
+{% extends "main.html" %}
+{% block htmltitle %}<title>{{ config.site_name }} · Laboratory of Cell and Molecular Mechanobiology</title>{% endblock %}
+{% block container %}
+  <div class="lc-home md-typeset">{{ page.content }}</div>
+{% endblock %}

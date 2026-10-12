@@ -1,0 +1,29 @@
+# Manual corrections applied on top of the automatic publication list.
+# The weekly sync never touches this file.
+
+# Papers to leave out of the list. PubMed IDs or DOIs.
+hide:
+  - "41563625"
+  - "37454339"
+  - "39313577"
+  - "34226698"
+  - "42052239"
+  - "38712306"
+
+# Papers missing from Europe PMC (book chapters, conference papers, etc.).
+# Same fields as data/publications.yaml.
+add: []
+
+# Papers to pin in "Selected publications" on the home page (newest first).
+featured:
+  - "42624657"
+  - "41915876"
+  - "41082347"
+  - "42083795"
+  - "37463754"
+  - "29073038"
+
+# Field fixes for single papers, keyed by PubMed ID or DOI. Example:
+# PubMed drops superscripts, so some titles need fixing here.
+fix:
+  "42361186": {title: "METTL3 regulates exocytosis independently of m6A"}

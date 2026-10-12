@@ -1,0 +1,35 @@
+{#- LCMM layout: our own fixed header and menu (from mkdocs.yml `nav`), no sidebars,
+    our own footer (generated from data/site.yaml by scripts/build_pages.py). -#}
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <link rel="preload" href="{{ 'assets/fonts/outfit-latin-wght-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'assets/fonts/cormorant-garamond-latin-300-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  {% set description = page.meta.description if page.meta and page.meta.description else config.site_description %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ page.title | striptags }}">
+  <meta property="og:description" content="{{ description | e }}">
+  <meta name="theme-color" content="#07090d">
+{% endblock %}
+
+{% block header %}
+  <header class="lc-header{% if page.meta and page.meta.template == 'home.html' %} lc-header--home{% endif %}" data-lc-header>
+    <div class="lc-header__inner">
+      <a class="lc-brand" href="{{ base_url }}/">
+        <span class="lc-brand__name">{{ config.site_name }}</span>
+        <span class="lc-brand__sub">Lund University</span>
+      </a>
+      <input type="checkbox" id="lc-menu" class="lc-menu__toggle" aria-hidden="true">
+      <label for="lc-menu" class="lc-menu__button" aria-label="Menu"><span></span></label>
+      {% include "partials/lcmm-nav.html" %}
+    </div>
+  </header>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+{% block site_nav %}{% endblock %}
+
+{% block footer %}
+  {% include "partials/lcmm-footer.html" %}
+{% endblock %}

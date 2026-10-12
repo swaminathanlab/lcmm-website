@@ -1,0 +1,21 @@
+# Home-page image gallery.
+#
+# Easiest: drop images (.jpg .jpeg .png .webp .tif .tiff) or short looping
+# videos (.mp4 .webm) into data/gallery/. Every file there is shown, newest
+# file name last unless listed below. Big files are fine: the build makes
+# web-sized copies (thumbnails ~900 px, full view ~2400 px).
+#
+# Optional: list files here to set the order and add captions/credits.
+# Files listed here come first, in this order; unlisted files follow,
+# sorted by name. `hide: true` keeps a file out without deleting it.
+#
+# - file: acini_ipn_hydrogel.jpg
+#   caption: MCF10A acini in a collagen-alginate IPN hydrogel
+#   credit: Kabilan Sakthivel
+# - file: fibroblast_lamin.mp4
+#   caption: Fibroblast on stiff ECM, live imaging
+#   credit: Swathi Packirisamy
+
+title: Inside the *lab*     # *word* = italic accent
+show_on_home: 12      # how many on the home page; all of them on /gallery/
+items: []

@@ -1,0 +1,52 @@
+name: Sync publications
+
+# Every Monday: look for new papers in Europe PMC (ORCID + name search).
+# Nothing goes online automatically: if anything changed, this opens a pull
+# request for you to review. Merging it starts the publish workflow, which
+# then waits for your approval before the site changes (see PUBLISHING.md).
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/sync_publications.py | tee sync.log
+      - name: Open a pull request if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet data/publications.yaml; then
+            echo "No new publications."
+            exit 0
+          fi
+          branch="publications-sync-$(date +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -am "Publications: weekly sync from Europe PMC"
+          git push -u origin "$branch"
+          {
+            echo "Weekly publication sync found changes."
+            echo
+            echo '```'
+            cat sync.log
+            echo '```'
+            echo
+            echo "Check the changes in data/publications.yaml (Files changed tab)."
+            echo "Not ours, or a duplicate preprint? Add its PubMed ID or DOI to \`hide:\` in data/publications_overrides.yaml on this branch."
+            echo "Merging does not publish by itself: the publish run still waits for your approval."
+          } > body.md
+          gh pr create --title "New publications ($(date +%Y-%m-%d))" --body-file body.md --base main --head "$branch"

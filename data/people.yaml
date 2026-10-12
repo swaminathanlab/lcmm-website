@@ -1,0 +1,46 @@
+# Lab members (People page). Order within each group is the order shown.
+#   id:     used for the photo file name: data/photos/<id>.jpg (square crop, any size).
+#           No photo -> initials are shown.
+#   name, role: required. Everything else is optional.
+#   links:  any of orcid, email, scholar, bluesky, github, linkedin, website.
+#   Names here are also highlighted in bold in author lists on the Publications page
+#   (pubmed_name is the "Surname Initials" form used there).
+# When someone leaves: move them to `alumni` and add `now:` (where they went).
+
+pi:
+  - id: vinay-swaminathan
+    name: Vinay Swaminathan
+    role: Group leader · Associate Professor · WCMM Fellow
+    pubmed_name: Swaminathan V
+    bio: |
+      Vinay trained as a mechanical engineer before moving into biology. He did his PhD
+      in physics on cell mechanics with Richard Superfine at UNC Chapel Hill, and his
+      postdoc with Clare Waterman at the NIH, working on how integrins and focal adhesions
+      sense mechanical cues. He started the lab at Lund University in 2018.
+    links:
+      orcid: 0000-0002-9946-810X
+      email: vinay.swaminathan@med.lu.se
+
+members:
+  - id: kabilan-sakthivel
+    name: Kabilan Sakthivel
+    role: Postdoctoral researcher
+    pubmed_name: Sakthivel K
+    blurb: ECM material properties and 3D epithelial invasion in IPN hydrogels.
+  - id: linn-engstrom
+    name: Linn Engström
+    role: PhD student
+    pubmed_name: Engström L
+    blurb: Mechanical memory and collective expansion of epithelial monolayers.
+  - id: swathi-packirisamy
+    name: Swathi Packirisamy
+    role: PhD student
+    pubmed_name: Packirisamy S
+    blurb: Multiscale mechanosensing and mechanical memory in fibroblasts.
+  # TODO add other current members (students, technicians, visitors)
+
+alumni: []
+  # - name: Firstname Lastname
+  #   role: Postdoc (2019–2023)
+  #   now: Group leader, Somewhere
+  #   pubmed_name: Lastname F

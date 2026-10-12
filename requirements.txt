@@ -1,0 +1,5 @@
+# Pinned so the site does not change unexpectedly; bump deliberately.
+zensical==0.0.65
+PyYAML==6.0.3
+Markdown==3.11
+pillow==12.3.0

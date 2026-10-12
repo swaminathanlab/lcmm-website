@@ -1,0 +1,45 @@
+# Site-wide text: home page, contact, footer. Edit here, push, the site rebuilds.
+# Lines marked TODO need checking or filling in before going live.
+
+name: Laboratory of Cell and Molecular Mechanobiology
+short_name: LCMM
+pi: Vinay Swaminathan
+# Big home-page headline. Words between *asterisks* are set in italic accent colour.
+headline: How cells *sense and remember* their physical world
+tagline: We study how the physical properties of the extracellular matrix shape cell fate, mechanical memory and cancer invasion.
+
+intro: |
+  We study how cells read the mechanical and physical properties of their surroundings,
+  how those signals are stored as lasting cellular states, and how this goes wrong in cancer.
+  We combine engineered 3D matrices, quantitative and polarization microscopy, microfluidics
+  and physical modelling with cell and molecular biology.
+
+# Picture (or looping .mp4) on the right of the home-page header. Put the file in
+# data/gallery/ and give its name here. Empty: the first gallery image is used;
+# no gallery images: an abstract pattern. Dark-background microscopy looks best.
+hero_image: ""          # TODO e.g. acini_ipn.jpg
+hero_caption: ""        # small label under the picture, e.g. "MCF10A acini in IPN hydrogel"
+
+affiliations:
+  - name: Division of Oncology, Department of Clinical Sciences, Lund University
+    url: https://www.med.lu.se/klinvetlund
+  - name: Wallenberg Centre for Molecular Medicine (WCMM), Lund University
+    url: https://www.wcmm.lu.se/
+
+contact:
+  email: vinay.swaminathan@med.lu.se
+  address: |
+    TODO building / room
+    Lund University, Lund, Sweden
+  orcid: 0000-0002-9946-810X
+  # Optional, shown as icons in the footer when set:
+  bluesky: ""           # TODO handle, e.g. lcmm.bsky.social
+  github: ""            # TODO e.g. swaminathanlab
+  google_scholar: ""    # TODO full profile URL
+  lund_portal: ""       # TODO Lund University research portal URL
+
+# Shown on the home page under "Funding". Logos are optional (docs/assets/images/logos/).
+funding:
+  - name: Wallenberg Centre for Molecular Medicine
+    url: https://www.wcmm.lu.se/
+  # TODO add current grants/funders (e.g. VR, Cancerfonden) only once awarded.
